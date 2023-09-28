@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+ 
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    background-color: #333;
+    padding: 0 300px;
+}
+.container h1{
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bolder;
+
+}
+.container .image-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.container .image-container >div{
+    height: 450px;
+    width: 500px;
+    border: 10px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+.container .image-container >div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.2s linear;
+
+}
+.container .image-container >div:hover img{
+    transform: scale(1.2);
+}
+
+
+
+/* modal */
+/* Modal container */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+} 
+
+.close {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+ .container .modal img{ 
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}  
+
+
+
+
+@media only screen and (max-width:767px) {
+    .container{
+        padding: 0 10px;
+    }
+    .modal{
+        width: 100%;
+        height: 100%;
+        /* top:20% */
+    }
+    .container .modal img{
+        width: 100%;
+        height: 70%;
+    }
+    .container .image-container >div{
+        width: 100%;
+    }
+    .container .image-container{
+            grid-template-columns: repeat(1,1fr);
+         }
+        }
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .container{
+        padding: 0 20px;
+    }
+    .modal{
+        width: 100%;
+        height: 100%;
+      
+    }
+    .container .modal img{
+        width: 90%;
+        height: 80%;
+    }
+ 
+    .container .image-container >div{
+        width: 100%;
+    }
+    .container .image-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media  only screen and (min-width:1025px) and (max-width:1440px) {
+    .container{
+        padding: 0 30px;
+    }
+    .container .image-container >div{
+        width: 100%;
+    }
+    .container .image-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery with zooming</title>
+    <link rel="stylesheet" href="ima.css">
+</head>
+<body>
+   <div class="container">
+    <h1>Photo Gallery</h1>
+    <div class="image-container">
+        <div class="wide">
+            <img src="images/1.webp" alt="" onclick="openModal('images/1.webp')">
+        </div>
+        <div >
+            <img src="images/2.webp" alt="">
+        </div>
+        <div class="tall">
+            <img src="images/24.webp" alt="">
+        </div>
+        <div class="wide">
+            <img src="images/4.jpg" alt="">
+        </div>
+        <div class="big">
+            <img src="images/5.jpg" alt="">
+        </div>
+        <div class="big" >
+            <img src="images/12.jpg" alt="">
+        </div>
+        <div  class="tall">
+            <img src="images/6.webp" alt="">
+        </div>
+        <div class="wide">
+            <img src="images/13.jpg" alt="">
+        </div>
+        <div  class="tall">
+            <img src="images/18.jpeg" alt="">
+        </div>
+        <div class="big">
+            <img src="images/17.jpg" alt="">
+        </div>
+        <div  class="tall">
+            <img src="images/9.jpeg" alt="">
+        </div>
+        <div  class="big">
+            <img src="images/16.jpg" alt="">
+        </div>
+        <div  class="tall">
+            <img src="images/11.webp" alt="" onclick="openModal('images/11.webp')">
+        </div>
+        <div >
+            <img src="images/14.webp" alt="">
+        </div>
+        <div class="wide">
+            <img src="images/15.jpg" alt="">
+        </div>
+       </div>
+    
+    
+       <div id="myModal"  class="modal">
+        <span class="close" id="close">&times;</span>
+        <img id="modal-image" src="" alt="">
+    </div>
+   </div>
+
+   <script src="script.js"></script> 
+</body>
+</html>
